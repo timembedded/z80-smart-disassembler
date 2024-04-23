@@ -323,6 +323,8 @@ if args['use_disark']==True:
     asmfile = open(outasm,"w")
     #print(fileContent)
 
+    asmfile.write('  org '+hx(offset)+'\n')
+
     #TODO: handle dw
     for l in dfileContent:
         ll=l.strip()
